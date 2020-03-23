@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollSnapper</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <h1>
+        Engineering for Tomorrow
+    </h1>
+    <button id="cta">Watch Here</button>
+
+    <div class="panel">
+        <img src="./light.svg" alt="" srcset="" id="light">
+        <p>Some great line about engineering and how we did something everyone loved !</p>
+        <div class="box"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.js"></script>
+
+    <script>
+        document.getElementById('cta').addEventListener('click',function(){
+            gsap.to('.panel',1.6,{scaleY:1,height:'100vh',ease:Circ.easeOut}) ; 
+            gsap.to('#light',1.4,{opacity:1,y:0,ease:Back.easeOut.config(1.7),delay:1.1});
+            gsap.to('p',1.5,{delay:1.2,opacity:1,x:0});  
+            gsap.to('.box',3,{scale:1,delay:1,opacity:1,ease:Elastic.easeOut});
+        })
+    </script>
+</body>
+</html>

@@ -1,2 +1,2 @@
-# animate
-Animation on Website using JS !
+# scrollanimate
+A test website to learn animations on scrolling !
